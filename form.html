@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title> - jsFiddle demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(window).load(function(){
+$('.up').on('click', function () {
+$('.input-quantity').val(parseInt($('.input-quantity').val()) + 1);
+});
+$('.down').on('click', function () {
+var test1 = $('.input-quantity').val();
+if (test1 != "0") {
+$('.input-quantity').val(test1 - 1);
+}
+});
+});//]]>
+</script>
+<style type="text/css">
+span{cursor:pointer;}
+</style>
+</head>
+<body>
+
+  <div class="inputQty"> <span class="up">+</span> 
+    <input maxlength="6" name="oa_quantity" class="input-quantity" value="1" min="0" type="text"> <span class="down">-</span>
+
+</div>
+  
+
+
+</body>
+</html>
